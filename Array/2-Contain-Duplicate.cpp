@@ -1,7 +1,11 @@
 #include <iostream>
 #include <vector>
 #include <list>
+#include <unordered_set>
 using namespace std;
+
+// O(N)
+// optimal approach using hash maps 
 
 class HashTable {
 private:
@@ -32,6 +36,21 @@ public:
     return false;
 }
 
+};
+
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        unordered_set<int> seen;
+
+        for (int i = 0; i < nums.size(); i++) {
+            if (seen.count(nums[i])) {
+                return true;
+            }
+            seen.insert(nums[i]);
+        }
+        return false;
+    }
 };
 
 int main() {
