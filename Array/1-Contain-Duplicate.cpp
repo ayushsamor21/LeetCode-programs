@@ -2,6 +2,10 @@
 #include <vector>
 using namespace std;
 
+// O(N^2)
+// brute force approach
+// optimal would be hash table
+
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
@@ -25,7 +29,7 @@ int main() {
     cin >> SizeOfArray;
 
     for (int i = 0; i < SizeOfArray; i++) {
-        cout << "Please enter the value at index" << i << ": ";
+        cout << "Please enter the value at index " << i << " : ";
         cin >> value;
         nums.push_back(value);
     }
